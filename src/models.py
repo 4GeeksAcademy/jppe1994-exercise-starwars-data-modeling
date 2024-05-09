@@ -38,9 +38,6 @@ class propiedades_personajes(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    name = Column(String(250), nullable=False)
-    lastName = Column(String(250), nullable=False)
-    mail = Column(String(250), nullable=False)
     personajes_id = Column(Integer, ForeignKey('personajes.id'))
     personajes = relationship(Personajes)
     planeta_id = Column(Integer, ForeignKey('planeta.id'))
